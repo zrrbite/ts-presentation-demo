@@ -6,6 +6,7 @@ const App: React.FC = () => {
     <div>
       <h1>Hello from React + TypeScript!</h1>
       <p>Project: presentation-demo</p>
+      <p>Learning git hooks!</p>
       <Counter/>
     </div>
   );
