@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 
-// This component has multiple issues:
-// 1. Double quotes instead of single (Prettier violation)
-// 2. Implicit 'any' type on handler parameter (TypeScript error)
-// 3. Inconsistent spacing (Prettier violation)
+// Now fixed:
+// ✓ Single quotes (Prettier)
+// ✓ Proper spacing (Prettier)
+// ✓ No implicit 'any' types (TypeScript)
 
-const Counter = () => {
-  const [count,setCount]=useState(0);
+const Counter = (): JSX.Element => {
+  const [count, setCount] = useState(0);
 
-  const handleClick = (e) => {
+  const handleClick = (): void => {
     setCount(count + 1);
   };
 

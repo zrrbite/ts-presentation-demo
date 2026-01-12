@@ -1,5 +1,5 @@
-import React from "react";
-import Counter from "./Counter";
+import React from 'react';
+import Counter from './Counter';
 
 const App: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const App: React.FC = () => {
       <h1>Hello from React + TypeScript!</h1>
       <p>Project: presentation-demo</p>
       <p>Learning git hooks!</p>
-      <Counter/>
+      <Counter />
     </div>
   );
 };

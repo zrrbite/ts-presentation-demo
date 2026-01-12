@@ -1,6 +1,7 @@
 # presentation-demo
 
 ## Overview
+
 TypeScript project created with bootstrap-ts-project.sh
 
 **Framework**: react
