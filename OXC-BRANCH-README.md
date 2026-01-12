@@ -30,9 +30,11 @@ This branch replaces ESLint and Prettier with their Rust-based alternatives from
    - 95%+ Prettier compatibility
    - Same formatting rules (single quotes, 100 width, etc.)
 
-4. **Git Hooks Updated**:
-   - `.git/hooks/pre-commit` - Uses oxfmt instead of prettier
-   - `.git/hooks/pre-push` - Uses oxlint instead of eslint
+4. **Git Hooks** (cross-platform bash hooks):
+   - Uses global hooks from `~/.git-hooks/`
+   - Automatically detects TypeScript projects
+   - Runs `npm run format:check` (oxfmt on this branch)
+   - Runs `npm run lint` (oxlint on this branch)
 
 ## Performance Comparison
 
