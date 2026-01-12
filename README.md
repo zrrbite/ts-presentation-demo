@@ -14,9 +14,9 @@ This entire project was scaffolded in **5 seconds** using a bootstrap script, sh
 - ✅ **React + Vite** with hot module replacement
 - ✅ **CLAUDE.md** for project context
 
-## The Three Quality Gates
+## The Four Quality Gates
 
-This project demonstrates three automated quality gates:
+This project demonstrates four automated quality gates:
 
 ### Gate 1: Prettier (Pre-commit)
 - Enforces consistent code formatting
@@ -32,6 +32,11 @@ This project demonstrates three automated quality gates:
 - Enforces best practices
 - Catches missing return types, unused variables
 - **Blocks pushes** if linting fails
+
+### Gate 4: Vitest (Pre-push)
+- Runs unit tests before push
+- Catches logic bugs and runtime errors
+- **Blocks pushes** if tests fail
 
 ## Quick Start
 
@@ -112,7 +117,33 @@ npm run preview      # Preview production build
 npm run type-check   # Type check without emitting
 npm run lint         # Run ESLint
 npm run format       # Format with Prettier
+npm run test         # Run tests in watch mode
+npm run test:run     # Run tests once
 ```
+
+## 🚀 Experimental: oxc-tools Branch
+
+Want **50-100x faster** linting and **20-30x faster** formatting? Check out the `oxc-tools` branch!
+
+This branch replaces ESLint and Prettier with Rust-based alternatives:
+
+| Tool | Standard | Oxc (Rust) | Speedup |
+|------|----------|------------|---------|
+| Linting | ESLint (500ms) | oxlint (13ms) | **38x faster** |
+| Formatting | Prettier (568ms) | oxfmt (29ms) | **19x faster** |
+
+**Try it:**
+
+```bash
+git checkout oxc-tools
+npm install
+npm run lint        # Uses oxlint (blazing fast!)
+npm run format      # Uses oxfmt (blazing fast!)
+```
+
+All four quality gates still work, just with faster tools! See [OXC-BRANCH-README.md](OXC-BRANCH-README.md) for details.
+
+**Note:** oxfmt is in alpha. For production, stick with main branch (Prettier/ESLint).
 
 ## The Workflow Philosophy
 
